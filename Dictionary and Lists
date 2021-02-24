@@ -1,0 +1,28 @@
+#define a dictionat (key/value) pair
+pat = {}
+pat['first'] ='Pat'
+pat['last'] = 'Feder'
+print([pat])
+
+steve = {}
+steve['first'] ='Steve'
+steve['last'] = 'Webster'
+print([steve])
+
+brian = {}
+brian['first'] ='Brian'
+brian['last'] = 'Kirsch'
+print([brian])
+
+#define a list of dictinaries
+employees = [pat, steve, brian]
+print(employees)
+
+employees.append (
+    {'first': 'Bill', 'last': 'Gates'})
+
+#Create a dictionary with your first and last name
+
+#add this dictionary to the list
+
+print(employees)
