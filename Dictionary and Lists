@@ -14,15 +14,24 @@ brian['first'] ='Brian'
 brian['last'] = 'Kirsch'
 print([brian])
 
-#define a list of dictinaries
+#Access items in the dictionary
+print(pat.get("first"))
+print(steve.get("first"))
+print(brian.get("first"))
+
+#define a list of dictinaries ... yikes :)
 employees = [pat, steve, brian]
+#print the list out, which contains multiple dictionaries
 print(employees)
 
+#Add someone new to the list
 employees.append (
     {'first': 'Bill', 'last': 'Gates'})
 
 #Create a dictionary with your first and last name
 
-#add this dictionary to the list
+#add the dictionary with your first and last names to the employees list
 
-print(employees)
+#The following will print the first name of every person in the list
+for employee in employees:
+    print(employee.get("first"))
