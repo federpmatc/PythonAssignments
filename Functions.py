@@ -7,7 +7,7 @@
 #Your assignment - 
 #1.)  Add a div and mult operation
 #2.)  Fix the if/else errors on lines 41, 42 and 43 so that check_number functio verifies that the user enters numeric values
-#3.)  Test your code with mult div and bad numeric values
+#3.)  Test your code with the mult and div operators.  Also test your code with bad numeric values
 
 def check_number(test_string):
 # Check for float string 
@@ -15,7 +15,6 @@ def check_number(test_string):
         float(test_string) 
         return(True)
     except : 
-        print("Not a float") 
         return(False)
 
 def calculator(first_number, second_number, operation):
