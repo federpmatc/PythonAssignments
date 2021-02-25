@@ -6,8 +6,9 @@
 
 #Your assignment - 
 #1.)  Add a div and mult operation
+#2.)  Fix the if/else errors on lines 41, 42 and 43 so that check_number functio verifies that the user enters numeric values
+#3.)  Test your code with mult div and bad numeric values
 
-#2.)  Use the function below to verify that the user enters a numeric value
 def check_number(test_string):
 # Check for float string 
     try :  
@@ -26,13 +27,20 @@ def calculator(first_number, second_number, operation):
         return('Invalid operation please specify add or sub')
 
     
-# Test your function with the values 6,4, add 
-# Should return 10
-#
+# Test the function with the values 6,4, add 
 print('Adding 6 + 4 = ' + str(calculator(6,4,'add')))
-# Test your function with the values 6,4, subtract 
-# Should return 2
+# Test the function with the values 6,4, subtract 
 print('Subtracting 6 - 4 = ' + str(calculator(6,4,'subtract')))
 # Test your function with the values 6,4, divide 
-# Should return some sort of error message
-print('Dividing 6 / 4 = ' + str(calculator(6,4,'divide')))
+print('Dividing 6 / 4 = ' + str(calculator(6,4,'div')))
+# Test your function with the values 6,4, mult 
+print('Dividing 6 / 4 = ' + str(calculator(6,4,'mult')))
+
+first_number = input('Enter a number ')
+second_number = input('Enter a number ')
+operation = input('Enter the operation add, sub, mult or div ')
+if check_number(first_number) = True and check_number(second_number) = True :
+    answer = calculator(first_number, second_number, operation)
+    print(first_number + ' ' + operation + ' ' + second_number + ' = ' + answer )
+else:
+    print("Dude make sure to enter actual numbers")
