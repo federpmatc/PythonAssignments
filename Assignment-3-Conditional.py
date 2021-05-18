@@ -5,12 +5,13 @@
 # If I enter 1 I should see the message "Make sure to let your instructor know if you're going to miss any classes" 
 
 absences = input('how many unexecused absences? ')
-#HINT: THe next line should take into account that user entered a string...you will need to treat price as a number
+#HINT: THe next line should take into account that user entered a string...you will need to treat absences as a number
+daysMissed = absences  #Hint - absences is a string, daysMissed should be an integer
 
-if absences > 3:
-	print("You will be dropped"
-elif absences >= 1:
-print("")
-else:
-print("")	     
+if daysMissed > 3:
+	print("You will be dropped")
+elif daysMissed >= 1:
+    print("")
+else :
+    print("")	     
 	      
