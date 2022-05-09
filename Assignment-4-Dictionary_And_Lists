@@ -1,4 +1,6 @@
-#As indicated on lines 32 and 34, you will need to create a dictionary with your name and then add it to the employees list.
+#As indicated on lines 38 and 40, you will need to create a dictionary with your name and then add it to the employees list.
+###########################
+
 #The last 2 lines of code automatically print our the first names from every dictionary in the list,
 #so your instructor will be able to tell if you did this correctly
 
