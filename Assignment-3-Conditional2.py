@@ -22,12 +22,16 @@ print("Your initials are " +   first_name[0:1] + " " +last_name[0:1])
 # if first name >= 10 characters long and last name is >= 10 characters
 #       print last name only
 
-# Test with the following values
+# Test with the following 4 sets of values
+#1.)
 # first name: Susan  last name: Ibach
-# output: Susan Ibach
+# here's the output you should see: Susan Ibach
+#2.)
 # first name: Susan  last name: ReallyLongLastName
-# output: Susan R.
+# here's the output you should see: Susan R.
+#3.)
 # first name: ReallyLongFirstName  last name: Ibach
-# output: R. Ibach
+# here's the output you should see:  R. Ibach
+#4.)
 # first name: ReallyLongFirstName  last name: ReallyLongLastName
-# output: ReallyLongLastName
+# here's the output you should see:  ReallyLongLastName
