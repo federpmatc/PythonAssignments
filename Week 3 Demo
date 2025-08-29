@@ -1,0 +1,193 @@
+#Review Conditional Statement
+#Assignment-3-Conditional2.py - https://github.com/federpmatc/PythonAssignments/blob/main/Assignment-3-Conditional2.py
+
+"""
+word = "He"
+#len is a function
+if len(word) > 3:
+    print("True")
+elif True or False:
+    print("elif")
+else:
+    print("False")
+
+first_name = input('Please enter your first name: ')
+first_length = len(first_name)
+
+# Ask the user for their last name
+last_name = input('Please enter your last name: ')
+last_length = len(last_name)
+
+print("Hello " + first_name + ' ' + last_name)
+print("Your first name is " + str(first_length) + " characters long")
+print("Your initials are " +   first_name[0:1] + " " +last_name[0:1])
+
+#List = [] ordered, mutable, allows duplicate elements
+#Tuple = () ordered, immutable, allows duplicate elements
+#Set = {} unordered, mutable, no duplicate elements
+#Dictionary = {key:value}
+
+
+#define a dictionary (key/value) pairs
+name = {}
+name['first'] ='Pat'
+name['last'] = 'Feder'
+#print the dictionary
+print([name])
+print(name['first'])
+print(name['last'])  
+
+#add a new key/value pair
+name['age'] = 45
+print(name['age'])
+name.update({'age':'32'})
+print(name['age'])
+
+
+
+list1 = [1,2,3,4,5]
+print(list1)
+list1.append(6)
+print(list1)
+list1.remove(3)
+print(list1)
+list1.pop()
+print(list1)
+list1.pop()
+print(list1)
+list1.insert(2,33)
+print(list1)
+list1[0] = 10
+print(list1)
+
+for list_item in list1:
+    print(list_item)    
+
+
+#define a dictionary (key/value) pair
+pat = {}
+pat['first'] ='Pat'
+pat['last'] = 'Feder'
+#print the dictionary
+print([pat])
+
+steve = {}
+steve['first'] ='Steve'
+steve['last'] = 'Webster'
+print([steve])
+
+brian = {}
+brian['first'] ='Brian'
+brian['last'] = 'Kirsch'
+print([brian])
+
+#Access items in the dictionary
+print(pat.get("first"))
+print(steve.get("first"))
+print(brian.get("first"))
+
+#define a list of dictinaries ... yikes :)
+employees = [pat, steve, brian]
+#print the list out, which contains multiple dictionaries
+#print list of dictionaries out
+print(employees)
+
+#Add someone new to the list
+employees.append (
+    {'first': 'Bill', 'last': 'Gates'})
+
+newGuy = {}
+newGuy['first'] = 'Elon'
+newGuy['last'] = 'Musk'
+employees.append(newGuy)
+
+
+###################################################
+#Create a dictionary with your first and last name
+
+#add the dictionary with your first and last names to the employees list
+
+#The following will print the first name of every person in the list
+print("Here are first name values for all dictionaries in our employees list")
+for employee in employees:
+    print(employee.get("first") + " " + employee.get("last")) 
+
+
+
+#Update Assignment-4-Loops_And_Conditions.py - https://github.com/federpmatc/PythonAssignments/blob/main/Assignment-4-Loops_And_Conditions.py
+
+#Figure out what the program below does
+#Add Comments to it so that your instructor can tell that you understand what program does
+
+#In this activity you will need to update the code to print out the total number of guesses
+
+#Create an empty list to hold the names that are guessed incorrectly
+names = []
+
+print("I'm thinking of someone's name, see if you can guess it")
+
+name = input("Enter someone's name ")
+while name != "Pat":
+	names.append(name)
+	name = input("Nope! Guess again....Enter a name ")
+
+########## Add code to printout the number of guesses ###########################
+
+print("Here are the names that you guessed incorrectly:")
+for guesses in names:
+	print("     " + guesses)
+
+print("You guessed " + str(len(names) + 1) + " times (including the correct guess)")
+
+
+####
+### https://youtu.be/ix9cRaBkVe0?si=6s1ubFwyGH1Qm2_J&t=9489
+clear = "\n" * 100
+print(clear)
+print("Welcome to the Grocery Store")
+print("------------------------")
+
+
+foods =  [] #creates an empty list
+prices = []
+total = 0
+
+while True:
+    food = input("Enter food to buy (q to quit): ")
+    if food.lower() == "q":
+        break
+    else:
+        try:
+            price = float(input(f"Enter the price of {food}: "))
+            foods.append(food)
+            prices.append(price)
+        except ValueError:
+            print("Invalid price. Please enter a number.")
+
+print("----- YOUR CART -----")
+
+for food in foods:
+    print(food)
+
+for price in prices:
+    total += price
+
+print(f"Your total is: ${total:.2f}")
+
+
+"""
+import psutil
+import time
+
+
+print("Monitoring network traffic... (press Ctrl+C to stop)")
+
+
+# Loop to check network traffic every second
+while True:
+    net_io = psutil.net_io_counters()
+    bytes_sent = net_io.bytes_sent
+    bytes_recv = net_io.bytes_recv
+    #print(str(bytes_sent))
+    print("Bytes Sent: " + str(bytes_sent) + " Bytes Received: " + str(bytes_recv) )
+    time.sleep(1)   # wait 1 second before checking again
