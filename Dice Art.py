@@ -1,0 +1,60 @@
+import random
+
+#dictionaries are key/value pairs
+#dice_art is a dictionary where the keys are the numbers on the dice (1-6)
+#and the values are collections representing the visual representation of each die face
+
+dice_art = {} #dictionary
+
+#key/value number/list of strings
+dice_art[1] = [ \
+        "┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘"]
+dice_art[2] = ["┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘"]
+
+dice_art[3] = ["┌─────────┐",
+        "│  ●      │",
+        "│    ●    │",
+        "│      ●  │",
+        "└─────────┘"]
+
+dice_art[4] = ["┌─────────┐",
+        "│  ●   ●  │",
+        "│         │",
+        "│  ●   ●  │",
+        "└─────────┘"]
+dice_art[5] = ["┌─────────┐",
+        "│  ●   ●  │",
+        "│    ●    │",
+        "│  ●   ●  │",
+        "└─────────┘"]
+dice_art[6] = ["┌─────────┐",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "└─────────┘"]
+
+di1 = dice_art.get(1)
+print(di1)
+
+print(di1[0])  # Example of accessing the top line of the die face for 1
+print(di1[1])  # Example of accessing the top line of the die face for 1
+print(di1[2])  # Example of accessing the top line of the die face for 1
+print(di1[3])  # Example of accessing the top line of the die face for 1
+print(di1[4])  # Example of accessing the top line of the die face for 1
+
+di1 = dice_art.get(1) #get the list if strings
+for line in di1:
+    print(line)
+
+# Generate a random integer between 1 and 6
+dice_roll = random.randint(1,6)
+print(dice_roll)
+
